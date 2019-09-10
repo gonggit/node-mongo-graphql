@@ -4,8 +4,6 @@ Simple webserver with NodeJS + ExpressJS + MongoDB + GraphQL
 
 ## Prerequisite
 
----
-
 Witn NPM, you can install dependent modules like
 
     npm install
@@ -22,7 +20,6 @@ Also, you must install [mongoDB](https://docs.mongodb.com/manual/installation/) 
 
 ## Usage
 
----
 After running application, you can request using HTTP to create or get books from database.
 
 For example, you can post request to create book like this.
@@ -38,7 +35,6 @@ curl http://localhost:4000/books/My_life
 ```
 
 ## Etc
----
 
 1. There is (title, author) unique key constration on book document.
 2. Fork this repository, and you can do anything you want!
