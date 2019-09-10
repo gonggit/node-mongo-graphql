@@ -5,15 +5,13 @@ const BookSchema = new db.Schema({
     type: String,
     required: true,
     validate: [
-      (title) => {
-        return !title.includes(' ');
-      },
-      'Space in title must be replaced with underscore'
-    ]
+      title => !title.includes(' '),
+      'Space in title must be replaced with underscore',
+    ],
   },
   author: {
     type: String,
-    required: false
+    required: false,
   },
 });
 
