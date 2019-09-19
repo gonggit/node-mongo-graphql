@@ -1,5 +1,8 @@
 import db from '../config/database';
 
+  /** 
+ * DB Schema
+ */
 const BookSchema = new db.Schema({
   title: {
     type: String,
@@ -16,4 +19,5 @@ const BookSchema = new db.Schema({
 });
 
 BookSchema.index({ title: 1, author: 1 }, { unique: true });
+
 export default db.model('Book', BookSchema);
