@@ -17,7 +17,7 @@ const UserSchema = new db.Schema({
     type: Boolean,
     required: false,
     default: true,
-  }
+  },
 });
 
 UserSchema.index({ email: 1 }, { unique: true });

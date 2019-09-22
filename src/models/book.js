@@ -1,6 +1,6 @@
 import db from '../config/database';
 
-  /** 
+/**
  * DB Schema
  */
 const BookSchema = new db.Schema({

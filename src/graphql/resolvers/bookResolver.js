@@ -2,10 +2,8 @@ import Book from '../../models/book';
 
 export default {
   book: async (args) => {
-    const title = args.title;
-    return await Book.findOne({ title: title });
+    const { title } = args;
+    return Book.findOne({ title });
   },
-  books: () => {
-    return Book.find({});
-  },
-}
+  books: () => Book.find({}),
+};
