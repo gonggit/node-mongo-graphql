@@ -1,14 +1,19 @@
 import express from 'express';
 import graphqlHTTP from 'express-graphql';
-import schema from './schema/bookSchema';
+import { buildSchema } from 'graphql';
+
+import typeDefs from './graphql/types/index';
+import rootValue from './graphql/resolvers/index';
 
 var app = express();
 
+const schema = buildSchema(typeDefs);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/api', graphqlHTTP({
-  schema,
+  schema: schema,
+  rootValue: rootValue,
   graphiql: true
 }));
 app.use(errorHandler);
