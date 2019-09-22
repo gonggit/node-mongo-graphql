@@ -20,18 +20,11 @@ Also, you must install [mongoDB](https://docs.mongodb.com/manual/installation/) 
 
 ## Usage
 
-After running application, you can request using HTTP to create or get books from database.
+After running application, you can request using GraphiQL to create or get books from database.
 
-For example, you can post request to create book like this.
+For example, you can access graphiql page to query what you want.
 ```
-curl -X POST http://localhost:4000/books/title -H "Content-Type:application/json" -d '{"title":"My life", "author":"gonggit"}'
-```
-
-You can verify that new document is created at book collection.
-Also, you can verify that book using API.
-
-```
-curl http://localhost:4000/books/My_life
+curl -X POST http://localhost:4000/api
 ```
 
 ## Etc
